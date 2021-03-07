@@ -1,0 +1,65 @@
+:root {
+    --animation-duration: 4s;
+    --stroke-color: dimgrey;
+}
+
+@font-face {
+    font-family: "Azonix";
+    src: url("Azonix/Azonix.otf")
+}
+
+body {
+    font-family: "Azonix";
+    font-size: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 100%;
+    color: dimgray;
+}
+
+#pi {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 400px;
+    height: 400px;
+    
+    animation: minimize 2s 5s;
+    animation-fill-mode: both;
+}
+
+.pi-path {
+    stroke: var(--stroke-color);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.pi-path1 {
+    fill: #21d4fd;
+    animation: appear 1s 4s;
+    animation-fill-mode: both;
+}
+
+.pi-path2 {
+    fill: #b721ff;
+    animation: trace-and-appear 4s 0.5s;
+    animation-fill-mode: both;
+}
+
+@keyframes trace-and-appear {
+    0% {stroke-dasharray: 0 500; opacity: 0;fill: none}
+    75% {stroke-dasharray: 500 0; opacity: 100%; fill: rgba(0, 0, 0, 0);}
+    100% {fill:  #b721ff}
+}
+
+@keyframes appear {
+    from {stroke: rgba(0, 0, 0, 0); fill: rgba(0, 0, 0, 0);}
+    to {stroke: var(--stroke-color); fill: #21d4fd;}
+}
+
+@keyframes minimize {
+    from {width: 400px; height: 400px}
+    to {width: 150px; height: 150px}
+}
