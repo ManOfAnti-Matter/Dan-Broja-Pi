@@ -8,6 +8,10 @@
     src: url("Azonix/Azonix.otf")
 }
 
+#body {
+    display: block !important;
+}
+
 body {
     font-family: "Azonix";
     font-size: 30px;
