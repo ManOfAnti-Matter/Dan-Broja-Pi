@@ -30,7 +30,7 @@ h1 {
     width: 400px;
     height: 400px;
     
-    animation: minimize 2s 5s;
+    animation: minimize 2s 4.5s;
     animation-fill-mode: both;
 }
 
@@ -42,18 +42,18 @@ h1 {
 
 .pi-path1 {
     fill: #21d4fd;
-    animation: appear 1s 4s;
+    animation: appear 1s 3.5s;
     animation-fill-mode: both;
 }
 
 .pi-path2 {
     fill: #b721ff;
-    animation: trace-and-appear 4s 0.5s;
+    animation: trace-and-appear 3.5s 0.5s;
     animation-fill-mode: both;
 }
 
 @keyframes trace-and-appear {
-    0% {stroke-dasharray: 0 500; opacity: 0;fill: none}
+    0% {stroke-dasharray: 0 500; opacity: 50%; fill: none}
     75% {stroke-dasharray: 500 0; opacity: 100%; fill: rgba(0, 0, 0, 0);}
     100% {fill:  #b721ff}
 }
